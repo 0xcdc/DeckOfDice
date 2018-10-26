@@ -1,9 +1,6 @@
 var dice = {
   randomValues: [],
   shuffle: function() {
-    for(var i=0;i<100;i++) {
-      beep();
-    }
     
     //populate the values
     var values = [];

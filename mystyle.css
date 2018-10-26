@@ -7,6 +7,14 @@
   border-radius: 10px;  
   font-size:200px;
   display: none;
+  height: 250px;
+  width:250px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 #dicetext {

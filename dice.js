@@ -44,17 +44,16 @@ function printNumber(number) {
   
   
     
-    $({deg: rotation}).animate({deg: 180-rotation}, {
-        duration: 500,
-        step: function(now) {
-            // in the step-callback (that is fired each step of the animation),
-            // you can use the `now` paramter which contains the current
-            // animation-position (`0` up to `angle`)
-            $placeholder.css({
-                transform: 'rotate(' + now + 'deg)'
-            });
-        }
-    });
+  $({deg: rotation}).animate({deg: 180-rotation}, {
+      duration: 500,
+      step: function(now) {
+          // in the step-callback (that is fired each step of the animation),
+          // you can use the `now` paramter which contains the current
+          // animation-position (`0` up to `angle`)
+          $placeholder.css({
+              transform: 'rotate(' + now + 'deg)'
+          });
+      }
   });
     
   

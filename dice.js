@@ -53,7 +53,7 @@ function doRoll() {
   beep();
 }
 
-document.onkeypress = doRoll();
-document.onclick = doRoll();
-document.ontouchstart = doRoll();
-document.ontouchmove = doRoll();
+document.onkeypress = doRoll;
+document.onclick = doRoll;
+document.ontouchstart = doRoll;
+document.ontouchmove = doRoll;

@@ -43,7 +43,6 @@ function printNumber(number) {
 function doRoll() {
   var result = dice.roll();
   printNumber(result);
-  rotate();
 }
 
 document.onkeypress = doRoll;

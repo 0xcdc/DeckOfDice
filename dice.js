@@ -53,12 +53,12 @@ function printNumber(number) {
 
   $dicetext.fadeOut(400, function () {
     $({deg: rotation}).animate({deg: 180-rotation}, {
-        console.log({now});
         duration: 500,
         step: function(now) {
             // in the step-callback (that is fired each step of the animation),
             // you can use the `now` paramter which contains the current
             // animation-position (`0` up to `angle`)
+            console.log({now});
             $dice.css({
                 transform: 'rotate(' + now + 'deg)'
             });

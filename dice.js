@@ -39,14 +39,10 @@ var dice = {
 //Prints dice roll to the page
 
 function printNumber(number) {
-  var placeholder = document.getElementById('placeholder');
-  placeholder.innerHTML = number;
+  $('#placeholder').innerHTML = number;
+  
 }
 
-function rotate() {
-  
-}
-  
 function doRoll() {
   var result = dice.roll();
   printNumber(result);

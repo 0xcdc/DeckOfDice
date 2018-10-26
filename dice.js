@@ -42,11 +42,10 @@ var dice = {
 
 //Prints dice roll to the page
 
-var rotation = 0;
+var rotation = 180;
 
 function printNumber(number) {
   $('#dicetext').fadeOut(400, function () {
-    $('#dicetext').text("");
     $({deg: rotation}).animate({deg: 180-rotation}, {
         duration: 500,
         step: function(now) {

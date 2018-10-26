@@ -39,26 +39,27 @@ var rotation = 0;
 
 function printNumber(number) {
   
-  var $placeholder = $('#placeholder')
-    .text(number);
-  
-  
-    
-  $({deg: rotation}).animate({deg: 180-rotation}, {
-      duration: 500,
-      step: function(now) {
-          // in the step-callback (that is fired each step of the animation),
-          // you can use the `now` paramter which contains the current
-          // animation-position (`0` up to `angle`)
-          $placeholder.css({
-              transform: 'rotate(' + now + 'deg)'
-          });
-      }
-  });
-    
-  
-}
+  var $dice = $('#dice');
+  var $dicetext = $('#dicetext');
 
+  $dicetext.fadeOut(100, {
+    $({deg: rotation}).animate({deg: 180-rotation}, {
+        duration: 500,
+        step: function(now) {
+            // in the step-callback (that is fired each step of the animation),
+            // you can use the `now` paramter which contains the current
+            // animation-position (`0` up to `angle`)
+            $dice.css({
+                transform: 'rotate(' + now + 'deg)'
+            });
+        }
+    });
+    $dicetext.text(number);
+    $dicetext.fadeIn(100);
+  }
+}
+    
+ 
 function doRoll() {
   var result = dice.roll();
   printNumber(result);

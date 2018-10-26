@@ -59,8 +59,7 @@ function printNumber(number) {
             $('#dice').css({
                 transform: 'rotate(' + now + 'deg)'
             });
-            rotation += 180;
-            rotation %= 360;
+            rotation = step;
         },
         complete: function() {
           $('#dicetext')

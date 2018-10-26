@@ -58,7 +58,7 @@ function printNumber(number) {
             $('#dice').css({
                 transform: 'rotate(' + now + 'deg)'
             });
-        }
+        };
         $('#dicetext')
           .text(number)
           .fadeIn(400);

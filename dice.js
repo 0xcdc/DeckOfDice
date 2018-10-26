@@ -47,11 +47,7 @@ var dice = {
 var rotation = 0;
 
 function printNumber(number) {
-  
-  var $dice = $('#dice');
-  var $dicetext = $('#dicetext');
-
-  $dicetext.fadeOut(400, function () {
+  $('#dicetext').fadeOut(400, function () {
     $({deg: rotation}).animate({deg: 180-rotation}, {
         duration: 500,
         step: function(now) {
@@ -59,12 +55,13 @@ function printNumber(number) {
             // you can use the `now` paramter which contains the current
             // animation-position (`0` up to `angle`)
             console.log({now});
-            $dice.css({
+            $('#dice').css({
                 transform: 'rotate(' + now + 'deg)'
             });
         }
-        $dicetext.text(number);
-        $dicetext.fadeIn(400);
+        $('#dicetext')
+          .text(number)
+          .fadeIn(400);
     });
   })
 }

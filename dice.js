@@ -1,29 +1,26 @@
 var dice = {
   randomValues: [],
   shuffle: function() {
-    
-    $("#dice").fadeOut(400, function () {
-      
-      $("#shuffling").fadeIn(400, function () {
-    
-        //populate the values
-        var values = [];
-        for(var h=0;h<2;h++) {
-          for(var i=1;i<7;i++) {
-            for(var j=1;j<7;j++) {
-              values.push(i+j);
-            }
-          }      
+    //populate the values
+    var values = [];
+    for(var h=0;h<2;h++) {
+      for(var i=1;i<7;i++) {
+        for(var j=1;j<7;j++) {
+          values.push(i+j);
         }
+      }      
+    }
 
-        //pick values at random
-        while(values.length > 0) {
-          var randomIndex = Math.floor(Math.random() * values.length);
-          var randomNumber = values.splice(randomIndex, 1)[0];
-          dice.randomValues.push(randomNumber);
-        }
-        console.log(dice.randomValues)
+    //pick values at random
+    while(values.length > 0) {
+      var randomIndex = Math.floor(Math.random() * values.length);
+      var randomNumber = values.splice(randomIndex, 1)[0];
+      dice.randomValues.push(randomNumber);
+    }
+    console.log(dice.randomValues)
     
+    $("#dice").fadeOut(400, () => {      
+      $("#shuffling").fadeIn(400, function () {
         $("#shuffling").fadeOut(400, function () {
           $("#dice").fadeIn(400);
           $("#dicetext").show();

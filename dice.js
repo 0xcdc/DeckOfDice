@@ -26,6 +26,7 @@ var dice = {
     
         $("#shuffling").fadeOut(400, function () {
           $("#dice").fadeIn(400);
+          $("#dicetext").show();
         })
       })
     })

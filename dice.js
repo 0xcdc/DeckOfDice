@@ -56,4 +56,4 @@ function doRoll() {
 document.onkeypress = doRoll;
 document.onclick = doRoll;
 document.ontouchstart = doRoll;
-document.ontouchmove = doRoll;
+

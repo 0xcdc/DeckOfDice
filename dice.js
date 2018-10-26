@@ -25,10 +25,10 @@ var dice = {
         console.log(this.randomValues)
     
         $("#shuffling").fadeOut(100, function () {
-          $("#dicde").fadeIn(100);
-        }
-      }
-    }
+          $("#dice").fadeIn(100);
+        })
+      })
+    })
   },
 
   roll: function () {
@@ -65,7 +65,7 @@ function printNumber(number) {
     });
     $dicetext.text(number);
     $dicetext.fadeIn(100);
-  }
+  })
 }
     
  

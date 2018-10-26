@@ -20,9 +20,9 @@ var dice = {
         while(values.length > 0) {
           var randomIndex = Math.floor(Math.random() * values.length);
           var randomNumber = values.splice(randomIndex, 1)[0];
-          this.randomValues.push(randomNumber);
+          dice.randomValues.push(randomNumber);
         }
-        console.log(this.randomValues)
+        console.log(dice.randomValues)
     
         $("#shuffling").fadeOut(100, function () {
           $("#dice").fadeIn(100);
@@ -32,11 +32,11 @@ var dice = {
   },
 
   roll: function () {
-    if(this.randomValues.length == 0) {
-      this.shuffle();
+    if(dice.randomValues.length == 0) {
+      dice.shuffle();
     }
   
-    return this.randomValues.pop();
+    return dice.randomValues.pop();
   }
 }
 

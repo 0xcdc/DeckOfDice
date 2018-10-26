@@ -2,24 +2,33 @@ var dice = {
   randomValues: [],
   shuffle: function() {
     
-    //populate the values
-    var values = [];
-    for(var h=0;h<2;h++) {
-      for(var i=1;i<7;i++) {
-        for(var j=1;j<7;j++) {
-          values.push(i+j);
-        }
-      }      
-    }
-  
-    //pick values at random
-    while(values.length > 0) {
-      var randomIndex = Math.floor(Math.random() * values.length);
-      var randomNumber = values.splice(randomIndex, 1)[0];
-      this.randomValues.push(randomNumber);
-    }
-    console.log(this.randomValues)
+    $("#dice").fadeOut(100, {
+      
+      $("#shuffling").fadeIn(100, {
     
+        //populate the values
+        var values = [];
+        for(var h=0;h<2;h++) {
+          for(var i=1;i<7;i++) {
+            for(var j=1;j<7;j++) {
+              values.push(i+j);
+            }
+          }      
+        }
+
+        //pick values at random
+        while(values.length > 0) {
+          var randomIndex = Math.floor(Math.random() * values.length);
+          var randomNumber = values.splice(randomIndex, 1)[0];
+          this.randomValues.push(randomNumber);
+        }
+        console.log(this.randomValues)
+    
+        $("#shuffling").fadeOut(100, {
+          $("#dicde").fadeIn(100);
+        }
+      }
+    }
   },
 
   roll: function () {

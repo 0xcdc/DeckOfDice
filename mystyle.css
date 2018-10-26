@@ -10,6 +10,7 @@
   border: 1px solid gray;
   border-radius: 10px;  
   font-size:200px;
+  display: hidden;
 }
 
 #dicetext {

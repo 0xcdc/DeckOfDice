@@ -2,9 +2,9 @@ var dice = {
   randomValues: [],
   shuffle: function() {
     
-    $("#dice").fadeOut(100, function () {
+    $("#dice").fadeOut(400, function () {
       
-      $("#shuffling").fadeIn(100, function () {
+      $("#shuffling").fadeIn(400, function () {
     
         //populate the values
         var values = [];
@@ -24,8 +24,8 @@ var dice = {
         }
         console.log(dice.randomValues)
     
-        $("#shuffling").fadeOut(100, function () {
-          $("#dice").fadeIn(100);
+        $("#shuffling").fadeOut(400, function () {
+          $("#dice").fadeIn(400);
         })
       })
     })
@@ -51,7 +51,7 @@ function printNumber(number) {
   var $dice = $('#dice');
   var $dicetext = $('#dicetext');
 
-  $dicetext.fadeOut(100, function () {
+  $dicetext.fadeOut(400, function () {
     $({deg: rotation}).animate({deg: 180-rotation}, {
         duration: 500,
         step: function(now) {
@@ -64,7 +64,7 @@ function printNumber(number) {
         }
     });
     $dicetext.text(number);
-    $dicetext.fadeIn(100);
+    $dicetext.fadeIn(400);
   })
 }
     

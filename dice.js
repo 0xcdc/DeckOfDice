@@ -36,7 +36,12 @@ var dice = {
 //Prints dice roll to the page
 
 function printNumber(number) {
-  $('#placeholder').text(number);
+  $('#placeholder')
+    .text(number)
+    .animate({
+    transform: rotate(+=1)
+  });
+    
   
 }
 

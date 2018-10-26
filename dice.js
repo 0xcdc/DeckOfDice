@@ -36,7 +36,7 @@ var dice = {
 //Prints dice roll to the page
 
 function printNumber(number) {
-  $('#placeholder').innerHTML = number;
+  $('#placeholder').text(number);
   
 }
 

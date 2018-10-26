@@ -35,11 +35,26 @@ var dice = {
 
 //Prints dice roll to the page
 
+var rotation = 0;
+
 function printNumber(number) {
-  $('#placeholder')
-    .text(number)
-    .animate({
-    transform: rotate(+=1)
+  
+  var $placeholder = $('#placeholder')
+    .text(number);
+  
+  
+    
+    $({deg: rotation}).animate({deg: 180-rotation}, {
+        duration: 500,
+        step: function(now) {
+            // in the step-callback (that is fired each step of the animation),
+            // you can use the `now` paramter which contains the current
+            // animation-position (`0` up to `angle`)
+            $placeholder.css({
+                transform: 'rotate(' + now + 'deg)'
+            });
+        }
+    });
   });
     
   

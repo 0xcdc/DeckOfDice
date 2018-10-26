@@ -63,9 +63,9 @@ function printNumber(number) {
                 transform: 'rotate(' + now + 'deg)'
             });
         }
+        $dicetext.text(number);
+        $dicetext.fadeIn(400);
     });
-    $dicetext.text(number);
-    $dicetext.fadeIn(400);
   })
 }
     

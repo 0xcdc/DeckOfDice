@@ -46,7 +46,7 @@ var rotation = 180;
 
 function printNumber(number) {
   $('#dicetext').fadeOut(400, function () {
-    $({deg: rotation}).animate({deg: 180-rotation}, {
+    $({deg: rotation}).animate({deg: 360-rotation}, {
         duration: 500,
         step: function(now) {
             // in the step-callback (that is fired each step of the animation),

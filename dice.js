@@ -8,7 +8,7 @@ var dice = {
         for(var j=1;j<7;j++) {
           values.push(i+j);
         }
-      }      
+      }
     }
 
     //pick values at random
@@ -18,8 +18,8 @@ var dice = {
       dice.randomValues.push(randomNumber);
     }
     console.log(dice.randomValues)
-    
-    $("#dice").fadeOut(400, () => {      
+
+    $("#dice").fadeOut(400, () => {
       $("#shuffling").fadeIn(400, function () {
         $("#shuffling").fadeOut(400, function () {
           $("#dice").fadeIn(400);
@@ -33,7 +33,7 @@ var dice = {
     if(dice.randomValues.length == 0) {
       dice.shuffle();
     }
-  
+
     return dice.randomValues.pop();
   }
 }
@@ -42,11 +42,9 @@ var dice = {
 
 //Prints dice roll to the page
 
-var rotation = 180;
-
 function printNumber(number) {
   $('#dicetext').fadeOut(400, function () {
-    $({deg: rotation}).animate({deg: 360-rotation}, {
+    $({deg: 0}).animate({deg: 360}, {
         duration: 500,
         step: function(now) {
             // in the step-callback (that is fired each step of the animation),
@@ -66,8 +64,8 @@ function printNumber(number) {
     });
   })
 }
-    
- 
+
+
 function doRoll() {
   var result = dice.roll();
   printNumber(result);

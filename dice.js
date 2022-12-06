@@ -38,13 +38,16 @@ var dice = {
   }
 }
 
-
+var flipFlop = Math.floor(Math.random() * 2);
+if (flipFlop == 0) flipFlop = -1;
 
 //Prints dice roll to the page
-
 function printNumber(number) {
+  beep();
   $('#dicetext').fadeOut(400, function () {
-    $({deg: 0}).animate({deg: 360}, {
+    let targetRotation = 360 - flipFlop * 45;
+    flipFlop *= -1;
+    $({deg: 0}).animate({deg: targetRotation}, {
         duration: 500,
         step: function(now) {
             // in the step-callback (that is fired each step of the animation),

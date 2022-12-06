@@ -43,7 +43,6 @@ if (flipFlop == 0) flipFlop = -1;
 
 //Prints dice roll to the page
 function printNumber(number) {
-  beep();
   $('#dicetext').fadeOut(400, function () {
     let targetRotation = 360 - flipFlop * 45;
     flipFlop *= -1;
